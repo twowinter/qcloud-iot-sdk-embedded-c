@@ -75,6 +75,9 @@ shadow_sample:
 	$(PLATFORM_CC) $(CFLAGS) $(SAMPLE_DIR)/scenarized/light_data_template_sample.c $(LDFLAGS) -o light_data_template_sample
 	
 	$(TOP_Q) \
+	$(PLATFORM_CC) $(CFLAGS) $(SAMPLE_DIR)/scenarized/flower_guardian_data_template_sample.c $(LDFLAGS) -o flower_guardian_data_template_sample
+
+	$(TOP_Q) \
 	$(PLATFORM_CC) $(CFLAGS) $(SAMPLE_DIR)/scenarized/aircond_$@.c $(LDFLAGS) -o aircond_$@
 
 	$(TOP_Q) \
@@ -84,6 +87,7 @@ shadow_sample:
 	mv $@ $(FINAL_DIR)/bin && \
 	mv data_template_sample $(FINAL_DIR)/bin && \
 	mv light_data_template_sample $(FINAL_DIR)/bin && \
+	mv flower_guardian_data_template_sample $(FINAL_DIR)/bin && \
 	mv aircond_$@ $(FINAL_DIR)/bin && \
 	mv aircond_$@_v2 $(FINAL_DIR)/bin
 endif
